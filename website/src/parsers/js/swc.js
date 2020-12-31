@@ -1,6 +1,6 @@
 import React from 'react';
 import defaultParserInterface from './utils/defaultESTreeParserInterface';
-import pkg from '@swc/wasm-web/package.json';
+import pkg from '@gengjiawen/swc/package.json';
 
 const ID = 'swc';
 
@@ -14,7 +14,7 @@ export default {
   locationProps: new Set(['span']),
 
   loadParser(callback) {
-    require(['@swc/wasm-web/wasm.js'], callback);
+    require(['@gengjiawen/swc/wasm.js'], callback);
   },
 
   parse(parser, code, options={}) {

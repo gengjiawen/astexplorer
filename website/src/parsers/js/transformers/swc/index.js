@@ -1,4 +1,4 @@
-import pkg from '@swc/wasm-web/package.json';
+import pkg from '@gengjiawen/swc/package.json';
 
 const ID = 'swc';
 
@@ -11,7 +11,7 @@ export default {
     defaultParserID: ID,
 
     loadTransformer(callback) {
-        require(['@swc/wasm-web/wasm'], callback);
+        require(['@gengjiawen/swc/wasm'], callback);
     },
 
     transform(swc, options, code) {
